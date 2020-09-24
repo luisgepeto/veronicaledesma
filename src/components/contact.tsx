@@ -39,14 +39,14 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                                 4: {
                                     type: "success",
                                     message:
-                                        "Your message has been sent.",
+                                        "Tu mensaje ha sido enviado.",
                                 },
                             })
                         } else {
                             setFeedback({
                                 4: {
                                     message:
-                                        "There was an error sending the message. Please try again.",
+                                        "Ocurrió un error enviando tu mensaje. Por favor intenta de nuevo.",
                                 },
                             })
                         }
@@ -55,7 +55,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                         setFeedback({
                             4: {
                                 message:
-                                    "There was an error sending the message. Please try again.",
+                                "Ocurrió un error enviando tu mensaje. Por favor intenta de nuevo.",
                             },
                         })
                         setTransactionState(false);
@@ -131,7 +131,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
                 <Button
                     type="button,submit"
-                    title="Send"
+                    title="Enviar"
                     disabled={transactionState}
                     iconRight={<IconRight spin={transactionState}/>}
                 />

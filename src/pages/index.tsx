@@ -97,7 +97,7 @@ const Wall = ({ data }) => {
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
             <ScrollIntoView selector="#portfolio">
                 <Button
-                    title="SEE WORKS"
+                    title="VER MI CV"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
@@ -143,7 +143,7 @@ const Wall = ({ data }) => {
 
 const About = ({ data }) => {
     return (
-        <div className="boxed">
+        <div id="home__about" className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     About
@@ -156,7 +156,7 @@ const About = ({ data }) => {
 
 const Blog = ({ children }) => {
     return (
-        <div className="container mx-auto px-0">
+        <div id="home__blog" className="container mx-auto px-0">
             <div className="pt-20 pb-10 text-center lg:pt-40 lg:pb-20">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     Blog
@@ -170,7 +170,7 @@ const Blog = ({ children }) => {
 const Contact = ({ data }) => {
     const hasContactForm = data.api_url
     return (
-        <div className="container mx-auto">
+        <div id="home__contact" className="container mx-auto">
             <div className="pt-20 pb-10 lg:pt-40 lg:pb-20 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     Contact

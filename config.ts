@@ -1,83 +1,78 @@
 const siteMetadata = {
-    title: `Elemental`,
-    siteUrl: `http://localhost`,
+    title: `Ing. Verónica Ledesma`,
+    siteUrl: `http://veronicaledesma.com`,
     capitalizeTitleOnHome: false,
-    logo: `/images/logo.png`,
+    logo: `/images/logo.png`,    
     icon: `/images/icon.png`,
-    titleImage: `/images/wall.png`,
-    ogImage: `/images/wall.png`,
+    titleImage: `/images/wall.jpg`,
+    ogImage: `/images/wall.jpg`,
     twoColumnWall: true,
-    cookiePolicy: true,
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    cookiePolicy: false,
+    introTag: `CEM | LEED AP BD+C | Ingeniera HVAC`,
+    description: `Apasionada por la eficiencia energética`,
     about:
-        "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
-    author: `@_akzhy`,
+        "Me enfoco al desarrollo de ingenierías HVAC buscando el diseño óptimo para lograr ahorros energéticos. Me apasiona la eficiencia energética desde el punto de vista ingenieril. Cuento con la acreditación CEM (Certified Energy Manager) otorgada por la Asociación de Ingenieros de Energía de Estados Unidos y la acreditación de LEED AP BD+C. Tengo experiencia diseñando sistemas HVAC para el ramo residencial, comercial, industrial y el sector salud. Me enfoco en garantizar en todos mis diseños un desempeño energético óptimo, acoplándome a los requerimientos del cliente, cuidando siempre cumplir con las condiciones de confort interiores y el filtrado ideal para la calidad del aire requerida. Actualmente diseño ingenierías HVAC y desarrollo auditorías energéticas. ",
+    author: `@nucleo_energia`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
-    darkmode: true,
-    switchTheme: true,
+    darkmode: false,
+    switchTheme: false,
     navLinks: [
         {
-            name: "HOME",
+            name: "INICIO",
             url: "/",
         },
         {
-            name: "ABOUT",
-            url: "/about",
+            name: "ACERCA DE",
+            url: "/#home__about",
         },
         {
             name: "BLOG",
-            url: "/blog",
+            url: "/#home__blog",
         },
         {
-            name: "PORTFOLIO",
-            url: "/portfolio",
+            name: "CV",
+            url: "/#portfolio",
         },
         {
-            name: "CONTACT",
-            url: "/contact",
+            name: "CONTACTO",
+            url: "/#home__contact",
         },
     ],
     footerLinks: [
         {
-            name: "PRIVACY POLICY",
-            url: "/privacy-policy",
-        },
-        {
-            name: "GitHub",
-            url: "https://github.com/akzhy/gatsby-starter-elemental",
-        },
+            name: "AVISO DE PRIVACIDAD",
+            url: "/aviso-de-privacidad",
+        }
     ],
     social: [
         {
             name: "Facebook",
             icon: "/images/Facebook.svg",
-            url: "#",
+            url: "https://facebook.com/nucleo.ingenieria",
         },
         {
             name: "Twitter",
             icon: "/images/Twitter.svg",
-            url: "#",
+            url: "https://twitter.com/nucleo_energia",
         },
         {
             name: "Instagram",
             icon: "/images/Instagram.svg",
-            url: "#",
+            url: "https://instagram.com/nucleo.ingenieria",
         },
         {
             name: "Youtube",
             icon: "/images/Youtube.svg",
-            url: "#",
+            url: "https://www.youtube.com/channel/UC6Lutp_r91hj9sHeX09156Q/featured",
         },
     ],
-    contact: {
-        // leave empty ('') or false to hide form
-        api_url: "https://getform.io/f/f227a36e-096a-4c6a-9963-9f1918a85bb3",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-        mail: "hi@akzhy.com",
-        phone: "000-000-0000",
-        address: "1234 \nLocation \nLocation",
+    contact: {        
+        api_url: "https://getform.io/f/cd3c6911-f5f0-4c38-a897-7c347eee9297",
+        description: `Si te gustaría agendar alguna consulta técnica, deja tus datos y me pondré en contacto contigo.`,
+        mail: "info@veronicaledesma.com",
+        phone: "81 2528 1759",
+        address: "PLANIFICADORES 2802\nCOL. EMPLEADOS S.F.E.O.\nC.P. 64909\nMONTERREY, N.L.",
     },
     disqus: "elemental-netlify-com",
 }
@@ -93,21 +88,21 @@ const beforeContactFormSubmit = data => {
     if (data.name.trim().length < 2) {
         errors.push({
             code: 1,
-            message: "Enter a name",
+            message: "Escribe tu nombre",
         })
     }
 
     if (!data.email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)) {
         errors.push({
             code: 2,
-            message: "Enter a valid email address",
+            message: "Escribe tu dirección de correo electrónico",
         })
     }
 
     if (data.message.trim().length < 15) {
         errors.push({
             code: 3,
-            message: "Enter a message with atleast 15 characters",
+            message: "Escribe un mensaje con al menos 15 caracteres",
         })
     }
 
