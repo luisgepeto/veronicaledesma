@@ -67,7 +67,7 @@ p {
 
 
 .supports-blend .title h1 {
-    color: #000;
+    color: #145557;
     background: #fff;
     mix-blend-mode: multiply;
 }
@@ -188,84 +188,84 @@ p {
     @apply w-full;
 }
 
-.post-content p {
+.portfolio-content p {
     @apply my-3;
 }
 
-.post-content h1, h2, h3, h4, h5, h6 {
+.portfolio-content h1, h2, h3, h4, h5, h6 {
     @apply font-black text-color-2 my-4;
 }
 
-.post-content h1 {
+.portfolio-content h1 {
     @apply text-5xl;
 }
 
-.post-content h2 {
+.portfolio-content h2 {
     @apply text-4xl;
 }
 
-.post-content h3 {
+.portfolio-content h3 {
     @apply text-3xl;
 }
 
-.post-content h4 {
+.portfolio-content h4 {
     @apply text-2xl;
 }
 
-.post-content h5 {
+.portfolio-content h5 {
     @apply text-xl;
 }
 
-.post-content h5 {
+.portfolio-content h5 {
     @apply text-lg;
 }
 
-.post-content hr {
+.portfolio-content hr {
     @apply my-4 border-medium;
 }
 
-.post-content ul {
+.portfolio-content ul {
     list-style: disc
 }
 
-.post-content ol {
+.portfolio-content ol {
     list-style: decimal;
 }
 
-.post-content ul, .post-content ol {
+.portfolio-content ul, .portfolio-content ol {
     @apply ml-4;
 }
 
-.post-content ul ul, .post-content ol ol {
+.portfolio-content ul ul, .portfolio-content ol ol {
     @apply ml-3;
 }
 
-.post-content li {
+.portfolio-content li {
     @apply my-2;
 }
 
-.post-content table {
+.portfolio-content table {
     @apply w-full my-6;
 }
 
-.post-content table tr {
+.portfolio-content table tr {
     border-bottom: 2px solid #eee;
     @apply border-medium;
 }
 
-.theme-dark .post-content table tr  {
+.theme-dark .portfolio-content table tr  {
     border-bottom: 2px solid #444;
 }
 
-.post-content table tr td, .post-content table tr th {
+.portfolio-content table tr td, .portfolio-content table tr th {
     @apply p-2 py-3 text-left;
 }
 
-.post-content blockquote{
+.portfolio-content blockquote{
     @apply border-l-4 border-primary p-3;
 }
 
-.post-content iframe {
+.portfolio-content iframe {
     max-width: 100%;
 }
 
@@ -274,10 +274,6 @@ p {
 }
 
 .theme-dark .input.focused {
-    background: theme("themes.dark.medium");
-}
-
-.theme-dark .blog-item .focused{
     background: theme("themes.dark.medium");
 }
 

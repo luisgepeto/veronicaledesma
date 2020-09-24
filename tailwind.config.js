@@ -34,21 +34,21 @@ module.exports = {
             },
         },
         colors: {
-            bg: "#fff",
+            bg: "#fafafa",
             bgalt: "#f5f5f5",
-            "color-default": "#333",
-            "color-1": "#8e24aa",
-            "color-2": "#673ab7",
-            "color-3": "#aeb4c5",
-            primary: "#f55555",
-            secondary: "#6888df",
-            link: "#0a71c5",
+            "color-default": "#004557",
+            "color-1": "#0e4749",
+            "color-2": "#126f72",
+            "color-3": "#088287",
+            primary: "#004557",
+            secondary: "#a9abae",
+            link: "#3c91e6",
             medium: "#cfd8dc",
             white: "#fff",
             black: "#000",
             transparent: "rgba(0,0,0,0)",
             error: "#ef5350",
-            success: "#8bc34a"
+            success: "#ade25d"
         },
         extend: {
             fontSize: {

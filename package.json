@@ -1,11 +1,12 @@
 {
-  "name": "gatsby-starter-elemental",
+  "name": "portfolio_vl",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Portfolio for VL",
   "version": "2.1.2",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
@@ -48,6 +49,7 @@
     "@typescript-eslint/parser": "^2.28.0",
     "autoprefixer": "^9.8.0",
     "cssnano": "^4.1.10",
+    "gh-pages": "^3.1.0",
     "prettier": "^1.19.1",
     "source-map-support": "^0.5.17",
     "ts-node": "^8.8.2",

@@ -8,7 +8,6 @@ import Layout from "../components/layout"
 import { Button } from "../components/ui"
 
 import ItemPortfolio from "../components/item-portfolio"
-import ItemBlog from "../components/item-blog"
 import { Form, Description as ContactDescription } from "../components/contact"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 
@@ -23,15 +22,12 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         />
     ))
 
-    const blogList = data.blog.edges.map(item => (
-        <ItemBlog data={item.node} key={`b-item-index-${item.node.id}`} />
-    ))
-
+    
     return (
         <Layout
             front={true}
             seo={{
-                title: "Home",
+                title: "Inicio",
                 description: siteData.description,
             }}
             navPlaceholder={false}
@@ -41,8 +37,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             {siteData.about !== "" && <About data={siteData.about} />}
             <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
-            </div>
-            <Blog>{blogList}</Blog>
+            </div>            
             <Contact data={siteData.contact} />
         </Layout>
     )
@@ -146,23 +141,10 @@ const About = ({ data }) => {
         <div id="home__about" className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    About
+                    Acerca de mí
                 </h2>
                 <p className="mt-5 text-lg">{data}</p>
             </div>
-        </div>
-    )
-}
-
-const Blog = ({ children }) => {
-    return (
-        <div id="home__blog" className="container mx-auto px-0">
-            <div className="pt-20 pb-10 text-center lg:pt-40 lg:pb-20">
-                <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Blog
-                </h2>
-            </div>
-            <div className="flex flex-wrap">{children}</div>
         </div>
     )
 }
@@ -173,7 +155,7 @@ const Contact = ({ data }) => {
         <div id="home__contact" className="container mx-auto">
             <div className="pt-20 pb-10 lg:pt-40 lg:pb-20 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Contact
+                    Contacto
                 </h2>
             </div>
             <div className="flex flex-wrap pb-40">
@@ -244,31 +226,6 @@ export const query = graphql`
                     }
                 }
             }
-        }
-        blog: allMdx(
-            filter: { fields: { sourceName: { eq: "blog" } } }
-            limit: 6
-        ) {
-            edges {
-                node {
-                    id
-                    frontmatter {
-                        title
-                        description
-                        date(formatString: "DD MMMM YYYY")
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 1000) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                    }
-                    fields {
-                        slug
-                    }
-                }
-            }
-        }
+        }        
     }
 `
