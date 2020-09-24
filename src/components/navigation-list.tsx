@@ -29,14 +29,16 @@ const List: React.FC<NavigationListProps> = ({
         }
     `)
     const items = data.site.siteMetadata.navLinks
-    const list = items.map((e, i) => (
-        <ListItem
-            key={`navigation-${name}-${i}`}
-            data={e}
-            active={`/${current}` === e.url}
-            liClassName={liClassName}
-        />
-    ))
+    const list = items.map((e, i) => {        
+        return (
+            <ListItem
+                key={`navigation-${name}-${i}`}
+                data={e}
+                active={`/${current}` === e.url}
+                liClassName={liClassName}
+            />
+        )
+    })
 
     if (withThemeSwitch) {
         const themeButtons = themes.map((item, i) => {

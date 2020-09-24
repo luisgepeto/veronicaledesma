@@ -13458,7 +13458,7 @@
               "defaultValue": null
             },
             {
-              "name": "portfolioItemsPerPage",
+              "name": "projectsItemsPerPage",
               "description": "",
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -14129,7 +14129,7 @@
               "deprecationReason": null
             },
             {
-              "name": "portfolioItemsPerPage",
+              "name": "projectsItemsPerPage",
               "description": null,
               "args": [],
               "type": {
@@ -14673,7 +14673,7 @@
               "deprecationReason": null
             },
             {
-              "name": "siteMetadata___portfolioItemsPerPage",
+              "name": "siteMetadata___projectsItemsPerPage",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

@@ -1,7 +1,7 @@
 {
-  "name": "portfolio_vl",
+  "name": "projects_vl",
   "private": true,
-  "description": "Portfolio for VL",
+  "description": "PROYECTOS for VL",
   "version": "2.1.2",
   "license": "MIT",
   "scripts": {

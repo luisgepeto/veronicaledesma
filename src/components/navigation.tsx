@@ -11,8 +11,7 @@ import { Theme } from "./layout"
 
 type NavbarProps = { navPlaceholder: boolean, location: WindowLocation, currentTheme: number, switchTheme: () => void, themes: Theme[], allowThemeSwitch: boolean, front: boolean };
 const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme, switchTheme, themes, allowThemeSwitch=true, front }) => {
-    const currentLocation = location.pathname.split("/")[1]
-
+    const currentLocation = location.hash;    
     const data = useStaticQuery<NavigationQuery>(graphql`
         query NavigationQuery {
             site {
@@ -31,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
 
 
     useEffect(() => {
-        const onScroll = () => {
+        const onScroll = () => {            
             if (document.documentElement.scrollTop > 50 && !scrolled) {
                 changeState(true)
             } else if (document.documentElement.scrollTop <= 50 && scrolled)

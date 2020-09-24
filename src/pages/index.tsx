@@ -7,15 +7,15 @@ import ScrollIntoView from "react-scroll-into-view"
 import Layout from "../components/layout"
 import { Button } from "../components/ui"
 
-import ItemPortfolio from "../components/item-portfolio"
+import ItemProjects from "../components/item-proyectos"
 import { Form, Description as ContactDescription } from "../components/contact"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
 
-    const portfolioList = data.portfolio.edges.map((item, _) => (
-        <ItemPortfolio
+    const projectsList = data.proyectos.edges.map((item, _) => (
+        <ItemProjects
             data={item.node}
             key={`p-item-index-${item.node.id}`}
             even={(_ + 1) % 2 === 0}
@@ -35,8 +35,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         >
             <Wall data={siteData} />
             {siteData.about !== "" && <About data={siteData.about} />}
-            <div className="px-4 lg:px-0" id="portfolio">
-                {portfolioList}
+            <div className="px-4 lg:px-0" id="proyectos">
+                {projectsList}
             </div>            
             <Contact data={siteData.contact} />
         </Layout>
@@ -90,9 +90,9 @@ const Wall = ({ data }) => {
                 {data.introTag}
             </p>
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
-            <ScrollIntoView selector="#portfolio">
+            <ScrollIntoView selector="#proyectos">
                 <Button
-                    title="VER MI CV"
+                    title="PROYECTOS"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
@@ -203,8 +203,8 @@ export const query = graphql`
                 }
             }
         }
-        portfolio: allMdx(
-            filter: { fields: { sourceName: { eq: "portfolio" } } }
+        proyectos: allMdx(
+            filter: { fields: { sourceName: { eq: "proyectos" } } }
             limit: 6
         ) {
             edges {

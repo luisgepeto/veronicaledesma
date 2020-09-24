@@ -39,7 +39,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
                     }
                 }
             }
-            portfolio: allMdx(filter: { fields: { sourceName: { eq: "portfolio" } } }) {
+            proyectos: allMdx(filter: { fields: { sourceName: { eq: "proyectos" } } }) {
                 edges {
                     node {
                         id
@@ -48,7 +48,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
             }
             limitPost: site {
                 siteMetadata {                    
-                    portfolioItemsPerPage
+                    projectsItemsPerPage
                 }
             }
         }
@@ -64,20 +64,20 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
             })
         })
 
-        
-        const portfolioItems = result.data.portfolio.edges
-        const portfolioItemsPerPage =
-            result.data.limitPost.siteMetadata.portfolioItemsPerPage
-        const numPortfolioItems = Math.ceil(portfolioItems.length / portfolioItemsPerPage)
 
-        Array.from({ length: numPortfolioItems }).forEach((_, i) => {
+        const projectsItems = result.data.proyectos.edges
+        const projectsItemsPerPage =
+            result.data.limitPost.siteMetadata.projectsItemsPerPage
+        const numProjectsItems = Math.ceil(projectsItems.length / projectsItemsPerPage)
+
+        Array.from({ length: numProjectsItems }).forEach((_, i) => {
             createPage({
-                path: i === 0 ? `/portfolio` : `/portfolio/${i + 1}`,
-                component: path.resolve("./src/templates/portfolio-list.tsx"),
+                path: i === 0 ? `/proyectos` : `/proyectos/${i + 1}`,
+                component: path.resolve("./src/templates/proyectos-list.tsx"),
                 context: {
-                    limit: portfolioItemsPerPage,
-                    skip: i * portfolioItemsPerPage,
-                    numPages: numPortfolioItems,
+                    limit: projectsItemsPerPage,
+                    skip: i * projectsItemsPerPage,
+                    numPages: numProjectsItems,
                     currentPage: i + 1,
                 },
             })

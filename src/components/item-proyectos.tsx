@@ -4,10 +4,10 @@ import Img from "gatsby-image"
 import { ArrowRight } from "react-feather"
 
 import Parallax from "../utils/parallax"
-import { IndexPageQuery_portfolio_edges_node } from "../pages/__generated__/IndexPageQuery"
+import { IndexPageQuery_projects_edges_node } from "../pages/__generated__/IndexPageQuery"
 
-type ItemPortfolioProps = { data: IndexPageQuery_portfolio_edges_node, even: boolean };
-export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
+type ItemProjectsProps = { data: IndexPageQuery_projects_edges_node, even: boolean };
+export const ItemProjects: React.FC<ItemProjectsProps> = ({ data, even }) => {
     const [state, changeState] = useState({
         animated: false,
         percentage: 0,
@@ -55,7 +55,7 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
         <Parallax changePercentage={updateState}>
             <div className="large-container mx-auto">
                 <div
-                    className={`my-4 py-8 lg:py-24 portfolio-item md:flex ${
+                    className={`my-4 py-8 lg:py-24 proyectos-item md:flex ${
                         state.animated ? "begin-animation" : ""
                     } ${even ? "even flex-row-reverse" : ""}`}
                 >
@@ -88,8 +88,8 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
                             </p>
                             <Button
                                 to={data.fields.slug}
-                                label={`View ${data.frontmatter.title}`}
-                                title={"View"}
+                                label={`Más información ${data.frontmatter.title}`}
+                                title={"Más información"}
                                 iconRight={<ArrowRight />}
                             />
                         </div>
@@ -100,4 +100,4 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
     )
 }
 
-export default ItemPortfolio;
+export default ItemProjects;

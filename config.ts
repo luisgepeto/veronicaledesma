@@ -13,7 +13,7 @@ const siteMetadata = {
     about:
         "Me enfoco al desarrollo de ingenierías HVAC buscando el diseño óptimo para lograr ahorros energéticos. Me apasiona la eficiencia energética desde el punto de vista ingenieril. Cuento con la acreditación CEM (Certified Energy Manager) otorgada por la Asociación de Ingenieros de Energía de Estados Unidos y la acreditación de LEED AP BD+C. Tengo experiencia diseñando sistemas HVAC para el ramo residencial, comercial, industrial y el sector salud. Me enfoco en garantizar en todos mis diseños un desempeño energético óptimo, acoplándome a los requerimientos del cliente, cuidando siempre cumplir con las condiciones de confort interiores y el filtrado ideal para la calidad del aire requerida. Actualmente diseño ingenierías HVAC y desarrollo auditorías energéticas. ",
     author: `@nucleo_energia`,
-    portfolioItemsPerPage: 10,
+    projectsItemsPerPage: 10,
     darkmode: false,
     switchTheme: false,
     navLinks: [
@@ -26,8 +26,8 @@ const siteMetadata = {
             url: "/#home__about",
         },
         {
-            name: "CV",
-            url: "/#portfolio",
+            name: "PROYECTOS",
+            url: "/#proyectos",
         },
         {
             name: "CONTACTO",
