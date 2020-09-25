@@ -80,7 +80,7 @@ export const ItemProjects: React.FC<ItemProjectsProps> = ({ data, even }) => {
                                 even ? "md:justify-end md:text-right" : ""
                             }`}
                         >
-                            <h3 className="text-color-1 text-5xl font-black to-up">
+                            <h3 className="text-color-1 text-5xl font-black to-up capitalize">
                                 {data.frontmatter.title}
                             </h3>
                             <p className="lg:mt-4 to-up">

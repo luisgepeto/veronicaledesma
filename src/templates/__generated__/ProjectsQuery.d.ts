@@ -32,6 +32,7 @@ export interface ProjectsQuery_mdx_frontmatter {
   title: string;
   date: any | null;
   description: string | null;
+  show_description: boolean | null;
   banner: ProjectsQuery_mdx_frontmatter_banner | null;
 }
 

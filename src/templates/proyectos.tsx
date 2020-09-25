@@ -29,18 +29,27 @@ export default function projects ({ location, data }: PageProps<ProjectsQuery, {
                     <div className="flex items-center justify-center relative lg:absolute w-full h-full top-0 left-0">
                         <div className="hidden lg:block absolute w-full h-full bg-black opacity-50"></div>
                         <div className="px-4 py-8 lg:p-0 relative z-10 text-center text-color-default lg:text-white bg-bgalt lg:bg-transparent">
-                            <h1 className="text-5xl font-bold text-color-1 lg:text-white">
+                            <h1 className="text-5xl font-bold text-color-1 lg:text-white capitalize">
                                 {data.mdx.frontmatter.title}
                             </h1>
-                            <p className="mt-1 flex items-center justify-center">
-                                <Calendar />{" "}
-                                <span className="ml-2">
-                                    {data.mdx.frontmatter.date}
-                                </span>
-                            </p>
-                            <p className="mt-3 md:w-3/4 mx-auto">
-                                {data.mdx.frontmatter.description}
-                            </p>
+                            {
+                                data.mdx.frontmatter.date && data.mdx.frontmatter.show_date && (
+                                <p className="mt-1 flex items-center justify-center">
+                                    <Calendar />{" "}
+                                    <span className="ml-2">
+                                        {data.mdx.frontmatter.date}
+                                    </span>
+                                </p>
+                                )
+                            }
+                            {
+                                data.mdx.frontmatter.show_description && (
+                                    <p className="mt-3 md:w-3/4 mx-auto">
+                                        {data.mdx.frontmatter.description}
+                                    </p>
+                                )
+                            }
+                            
                         </div>
                     </div>
                 </div>
@@ -62,6 +71,8 @@ export const query = graphql`
                 title
                 date(formatString: "DD MMMM YYYY")
                 description
+                show_description
+                show_date
                 banner {
                     publicURL
                     childImageSharp {
