@@ -34,7 +34,7 @@ const List: React.FC<NavigationListProps> = ({
             <ListItem
                 key={`navigation-${name}-${i}`}
                 data={e}
-                active={`/${current}` === e.url}
+                active={false}
                 liClassName={liClassName}
             />
         )

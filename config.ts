@@ -65,9 +65,7 @@ const siteMetadata = {
     contact: {        
         api_url: "https://getform.io/f/cd3c6911-f5f0-4c38-a897-7c347eee9297",
         description: `Si te gustaría agendar alguna consulta técnica, deja tus datos y me pondré en contacto contigo.`,
-        mail: "info@veronicaledesma.com",
-        phone: "81 2528 1759",
-        address: "PLANIFICADORES 2802\nCOL. EMPLEADOS S.F.E.O.\nC.P. 64909\nMONTERREY, N.L.",
+        mail: "info@nucleoingenieria.com.mx"        
     },
     disqus: "elemental-netlify-com",
 }

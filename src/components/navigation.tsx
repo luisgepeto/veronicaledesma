@@ -11,7 +11,7 @@ import { Theme } from "./layout"
 
 type NavbarProps = { navPlaceholder: boolean, location: WindowLocation, currentTheme: number, switchTheme: () => void, themes: Theme[], allowThemeSwitch: boolean, front: boolean };
 const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme, switchTheme, themes, allowThemeSwitch=true, front }) => {
-    const currentLocation = location.hash;    
+    const currentLocation = location;    
     const data = useStaticQuery<NavigationQuery>(graphql`
         query NavigationQuery {
             site {

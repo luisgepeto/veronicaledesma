@@ -156,25 +156,7 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
                             {data.mail}
                         </a>
                     </li>
-                )}
-                {data.phone && (
-                    <li className="flex items-center mt-4">
-                        <span className="text-secondary icon">
-                            <Phone />
-                        </span>
-                        <a className="ml-4" href={"tel:" + data.phone}>
-                            {data.phone}
-                        </a>
-                    </li>
-                )}
-                {data.address && (
-                    <li className="flex items-start mt-4">
-                        <span className="mt-1 text-secondary icon">
-                            <MapPin />
-                        </span>
-                        <p className="whitespace-pre ml-4">{data.address}</p>
-                    </li>
-                )}
+                )}                
                 <li>
                     <SocialLinks />
                 </li>

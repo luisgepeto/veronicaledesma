@@ -44,9 +44,7 @@ export const query = graphql`
                 contact {
                     api_url
                     description
-                    mail
-                    phone
-                    address
+                    mail                    
                 }
             }
         }
