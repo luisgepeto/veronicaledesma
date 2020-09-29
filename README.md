@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/version-2.1.2-green.svg) ![](https://img.shields.io/badge/License-MIT-orange.svg)
 
 
-Elemental is a proyectos template suitable for artists, photographers, designers etc. With the starter you can create blog, proyectos and miscellaneous posts (such as privacy-policy).
+Elemental is a experience template suitable for artists, photographers, designers etc. With the starter you can create blog, experience and miscellaneous posts (such as privacy-policy).
 
 **[Live Demo](https://elemental.netlify.app)** 
 
@@ -46,7 +46,7 @@ const siteMetadata = {
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
     author: `@_akzhy`, // Author
     blogItemsPerPage: 10,
-    projectsItemsPerPage: 10,
+    experienceItemsPerPage: 10,
     darkmode: true, // Whether to enable the darkmode by default. Change to false if you want the light mode
     switchTheme: true, // Whether to show a switch theme button on the navbar
     // The links shown on the navbar and footer, follow the same structure to add or remove more items.
@@ -63,8 +63,8 @@ const siteMetadata = {
             url: "/blog"
         },
         {
-            name: "PROYECTOS",
-            url: "/proyectos"
+            name: "experience",
+            url: "/experience"
         },
         {
             name: "CONTACT",
@@ -128,9 +128,9 @@ description: The description shown in the listing page. Also used for SEO descri
 
 If you don't want the blog section, simply delete everything inside the `contents/blog` folder. (Do not delete the folder itself)
 
-#### Creating new proyectos posts.
+#### Creating new experience posts.
 
-Open the `contents/proyectos` folder and create a new folder with the name you wish to see as the URL. Inside the folder create an `index.md` file and also include any files you wish to add.
+Open the `contents/experience` folder and create a new folder with the name you wish to see as the URL. Inside the folder create an `index.md` file and also include any files you wish to add.
 
 The frontmatter should be of the below structure
 
@@ -138,13 +138,13 @@ The frontmatter should be of the below structure
 ---
 title: Title of your post
 date: 2019-06-29 <-- Date should be in the given format
-banner: ./banner.jpg <-- Banner shown in the proyectos post and also used as open graph image
+banner: ./banner.jpg <-- Banner shown in the experience post and also used as open graph image
 image: ./image.jpg <-- Image shown on the list pages 
 description: The description shown in the listing page. Also used for SEO description. 
 ---
 ```
 
-PROYECTOS pages support the creation of grids.
+experience pages support the creation of grids.
 
 To create a grid, follow the below structure
 

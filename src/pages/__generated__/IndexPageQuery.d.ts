@@ -36,7 +36,7 @@ export interface IndexPageQuery_site {
   siteMetadata: IndexPageQuery_site_siteMetadata | null;
 }
 
-export interface IndexPageQuery_proyectos_edges_node_frontmatter_image_childImageSharp_fluid {
+export interface IndexPageQuery_experience_edges_node_frontmatter_image_childImageSharp_fluid {
   base64: string | null;
   aspectRatio: number;
   src: string;
@@ -44,39 +44,39 @@ export interface IndexPageQuery_proyectos_edges_node_frontmatter_image_childImag
   sizes: string;
 }
 
-export interface IndexPageQuery_proyectos_edges_node_frontmatter_image_childImageSharp {
-  fluid: IndexPageQuery_proyectos_edges_node_frontmatter_image_childImageSharp_fluid | null;
+export interface IndexPageQuery_experience_edges_node_frontmatter_image_childImageSharp {
+  fluid: IndexPageQuery_experience_edges_node_frontmatter_image_childImageSharp_fluid | null;
 }
 
-export interface IndexPageQuery_proyectos_edges_node_frontmatter_image {
-  childImageSharp: IndexPageQuery_proyectos_edges_node_frontmatter_image_childImageSharp | null;
+export interface IndexPageQuery_experience_edges_node_frontmatter_image {
+  childImageSharp: IndexPageQuery_experience_edges_node_frontmatter_image_childImageSharp | null;
 }
 
-export interface IndexPageQuery_proyectos_edges_node_frontmatter {
+export interface IndexPageQuery_experience_edges_node_frontmatter {
   title: string;
   description: string | null;
-  image: IndexPageQuery_proyectos_edges_node_frontmatter_image | null;
+  image: IndexPageQuery_experience_edges_node_frontmatter_image | null;
 }
 
-export interface IndexPageQuery_proyectos_edges_node_fields {
+export interface IndexPageQuery_experience_edges_node_fields {
   slug: string | null;
 }
 
-export interface IndexPageQuery_proyectos_edges_node {
+export interface IndexPageQuery_experience_edges_node {
   id: string;
-  frontmatter: IndexPageQuery_proyectos_edges_node_frontmatter | null;
-  fields: IndexPageQuery_proyectos_edges_node_fields | null;
+  frontmatter: IndexPageQuery_experience_edges_node_frontmatter | null;
+  fields: IndexPageQuery_experience_edges_node_fields | null;
 }
 
-export interface IndexPageQuery_proyectos_edges {
-  node: IndexPageQuery_proyectos_edges_node;
+export interface IndexPageQuery_experience_edges {
+  node: IndexPageQuery_experience_edges_node;
 }
 
-export interface IndexPageQuery_proyectos {
-  edges: IndexPageQuery_proyectos_edges[];
+export interface IndexPageQuery_experience {
+  edges: IndexPageQuery_experience_edges[];
 }
 
 export interface IndexPageQuery {
   site: IndexPageQuery_site | null;
-  proyectos: IndexPageQuery_proyectos;
+  experience: IndexPageQuery_experience;
 }

@@ -12,8 +12,8 @@ const plugins = [
     {
         resolve: `gatsby-source-filesystem`,
         options: {
-            name: `proyectos`,
-            path: `${__dirname}/contents/proyectos/`,
+            name: `experience`,
+            path: `${__dirname}/contents/experiencia/`,
         },
     },
     {

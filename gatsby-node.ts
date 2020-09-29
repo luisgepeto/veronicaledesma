@@ -9,7 +9,7 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = async ({ node, getNode, 
         const slug = createFilePath({ node, getNode })
         const sourceName = getNode(node.parent).sourceInstanceName
         const prefix = sourceName === "basepages" ? '' : '/'+sourceName;
-
+        
         createNodeField({
             node,
             name: `slug`,
@@ -39,7 +39,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
                     }
                 }
             }
-            proyectos: allMdx(filter: { fields: { sourceName: { eq: "proyectos" } } }) {
+            experience: allMdx(filter: { fields: { sourceName: { eq: "experience" } } }) {
                 edges {
                     node {
                         id
@@ -48,11 +48,11 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
             }
             limitPost: site {
                 siteMetadata {                    
-                    projectsItemsPerPage
+                    experienceItemsPerPage
                 }
             }
         }
-    `).then(result => {
+    `).then(result => {        
         result.data.all.edges.forEach(({ node }) => {
             let template = node.fields.sourceName
             createPage({
@@ -64,23 +64,6 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
             })
         })
 
-
-        const projectsItems = result.data.proyectos.edges
-        const projectsItemsPerPage =
-            result.data.limitPost.siteMetadata.projectsItemsPerPage
-        const numProjectsItems = Math.ceil(projectsItems.length / projectsItemsPerPage)
-
-        Array.from({ length: numProjectsItems }).forEach((_, i) => {
-            createPage({
-                path: i === 0 ? `/proyectos` : `/proyectos/${i + 1}`,
-                component: path.resolve("./src/templates/proyectos-list.tsx"),
-                context: {
-                    limit: projectsItemsPerPage,
-                    skip: i * projectsItemsPerPage,
-                    numPages: numProjectsItems,
-                    currentPage: i + 1,
-                },
-            })
-        })
+        
     })
 }

@@ -93,7 +93,7 @@ export default ({ children, front, seo, navPlaceholder=true, location }: LayoutP
     )
 }
 
-const Head = ({ data }) => {
+const Head = ({ data }) => {    
     return (
         <Helmet>
             <link

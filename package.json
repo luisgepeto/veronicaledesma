@@ -1,7 +1,7 @@
 {
-  "name": "projects_vl",
+  "name": "experience_vl",
   "private": true,
-  "description": "PROYECTOS for VL",
+  "description": "experience for VL",
   "version": "2.1.2",
   "license": "MIT",
   "scripts": {

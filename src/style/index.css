@@ -139,7 +139,7 @@ p {
     left: 0;
 }
 
-.proyectos-item .image {
+.experience-item .image {
     clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
     transition: clip-path 0.50s;
     transition-timing-function: ease-in-out;
@@ -147,25 +147,25 @@ p {
     transform: translateY(0);
 }
 
-.proyectos-item.even .image {
+.experience-item.even .image {
     clip-path: polygon(100% 0, 100% 0, 100% 99%, 100% 100%);
 }
 
 
-.proyectos-item.begin-animation .image{
+.experience-item.begin-animation .image{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.proyectos-item .to-up {
+.experience-item .to-up {
     transform: translate(0, 50px);
     transition: transform 0.25s;
 }
 
-.proyectos-item .to-up:nth-child(2){
+.experience-item .to-up:nth-child(2){
     transition-delay: 0.2s;
 }
 
-.proyectos-item.begin-animation .to-up {
+.experience-item.begin-animation .to-up {
     transform: translate(0, 0px);
 }
 
@@ -188,84 +188,84 @@ p {
     @apply w-full;
 }
 
-.proyectos-content p {
+.experience-content p {
     @apply my-3;
 }
 
-.proyectos-content h1, h2, h3, h4, h5, h6 {
+.experience-content h1, h2, h3, h4, h5, h6 {
     @apply font-black text-color-2 my-4;
 }
 
-.proyectos-content h1 {
+.experience-content h1 {
     @apply text-5xl;
 }
 
-.proyectos-content h2 {
+.experience-content h2 {
     @apply text-4xl;
 }
 
-.proyectos-content h3 {
+.experience-content h3 {
     @apply text-3xl;
 }
 
-.proyectos-content h4 {
+.experience-content h4 {
     @apply text-2xl;
 }
 
-.proyectos-content h5 {
+.experience-content h5 {
     @apply text-xl;
 }
 
-.proyectos-content h5 {
+.experience-content h5 {
     @apply text-lg;
 }
 
-.proyectos-content hr {
+.experience-content hr {
     @apply my-4 border-medium;
 }
 
-.proyectos-content ul {
+.experience-content ul {
     list-style: disc
 }
 
-.proyectos-content ol {
+.experience-content ol {
     list-style: decimal;
 }
 
-.proyectos-content ul, .proyectos-content ol {
+.experience-content ul, .experience-content ol {
     @apply ml-4;
 }
 
-.proyectos-content ul ul, .proyectos-content ol ol {
+.experience-content ul ul, .experience-content ol ol {
     @apply ml-3;
 }
 
-.proyectos-content li {
+.experience-content li {
     @apply my-2;
 }
 
-.proyectos-content table {
+.experience-content table {
     @apply w-full my-6;
 }
 
-.proyectos-content table tr {
+.experience-content table tr {
     border-bottom: 2px solid #eee;
     @apply border-medium;
 }
 
-.theme-dark .proyectos-content table tr  {
+.theme-dark .experience-content table tr  {
     border-bottom: 2px solid #444;
 }
 
-.proyectos-content table tr td, .proyectos-content table tr th {
+.experience-content table tr td, .experience-content table tr th {
     @apply p-2 py-3 text-left;
 }
 
-.proyectos-content blockquote{
+.experience-content blockquote{
     @apply border-l-4 border-primary p-3;
 }
 
-.proyectos-content iframe {
+.experience-content iframe {
     max-width: 100%;
 }
 

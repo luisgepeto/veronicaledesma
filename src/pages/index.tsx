@@ -7,15 +7,15 @@ import ScrollIntoView from "react-scroll-into-view"
 import Layout from "../components/layout"
 import { Button } from "../components/ui"
 
-import ItemProjects from "../components/item-proyectos"
+import ItemExperience from "../components/item-experience"
 import { Form, Description as ContactDescription } from "../components/contact"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
 
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
 
-    const projectsList = data.proyectos.edges.map((item, _) => (
-        <ItemProjects
+    const experienceList = data.experience.edges.map((item, _) => (
+        <ItemExperience
             data={item.node}
             key={`p-item-index-${item.node.id}`}
             even={(_ + 1) % 2 === 0}
@@ -35,8 +35,8 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         >
             <Wall data={siteData} />
             {siteData.about !== "" && <About data={siteData.about} />}
-            <div className="px-4 lg:px-0" id="proyectos">
-                {projectsList}
+            <div className="px-4 lg:px-0" id="experience">
+                {experienceList}
             </div>            
             <Contact data={siteData.contact} />
         </Layout>
@@ -90,9 +90,9 @@ const Wall = ({ data }) => {
                 {data.introTag}
             </p>
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
-            <ScrollIntoView selector="#proyectos">
+            <ScrollIntoView selector="#experience">
                 <Button
-                    title="PROYECTOS"
+                    title="EXPERIENCIA"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
@@ -138,7 +138,7 @@ const Wall = ({ data }) => {
 
 const About = ({ data }) => {
     return (
-        <div id="home__about" className="boxed">
+        <div id="about" className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     Acerca de mí
@@ -152,7 +152,7 @@ const About = ({ data }) => {
 const Contact = ({ data }) => {
     const hasContactForm = data.api_url
     return (
-        <div id="home__contact" className="container mx-auto">
+        <div id="contact" className="container mx-auto">
             <div className="pt-20 pb-10 lg:pt-40 lg:pb-20 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     Contacto
@@ -201,8 +201,8 @@ export const query = graphql`
                 }
             }
         }
-        proyectos: allMdx(
-            filter: { fields: { sourceName: { eq: "proyectos" } } }
+        experience: allMdx(
+            filter: { fields: { sourceName: { eq: "experience" } } }
             limit: 6
         ) {
             edges {

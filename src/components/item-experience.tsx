@@ -4,10 +4,10 @@ import Img from "gatsby-image"
 import { ArrowRight } from "react-feather"
 
 import Parallax from "../utils/parallax"
-import { IndexPageQuery_projects_edges_node } from "../pages/__generated__/IndexPageQuery"
+import { IndexPageQuery_experience_edges_node } from "../pages/__generated__/IndexPageQuery"
 
-type ItemProjectsProps = { data: IndexPageQuery_projects_edges_node, even: boolean };
-export const ItemProjects: React.FC<ItemProjectsProps> = ({ data, even }) => {
+type ItemExperienceProps = { data: IndexPageQuery_experience_edges_node, even: boolean };
+export const ItemExperience: React.FC<ItemExperienceProps> = ({ data, even }) => {
     const [state, changeState] = useState({
         animated: false,
         percentage: 0,
@@ -55,7 +55,7 @@ export const ItemProjects: React.FC<ItemProjectsProps> = ({ data, even }) => {
         <Parallax changePercentage={updateState}>
             <div className="large-container mx-auto">
                 <div
-                    className={`my-4 py-8 lg:py-24 proyectos-item md:flex ${
+                    className={`my-4 py-8 lg:py-24 experience-item md:flex ${
                         state.animated ? "begin-animation" : ""
                     } ${even ? "even flex-row-reverse" : ""}`}
                 >
@@ -100,4 +100,4 @@ export const ItemProjects: React.FC<ItemProjectsProps> = ({ data, even }) => {
     )
 }
 
-export default ItemProjects;
+export default ItemExperience;
