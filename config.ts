@@ -1,9 +1,9 @@
 const siteMetadata = {
     title: `Ing. Verónica Ledesma`,
-    siteUrl: `http://veronicaledesma.com`,
+    siteUrl: `https://veronicaledesma.com`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,    
-    icon: `/images/icon.png`,
+    icon: `/images/favicon.ico`,
     titleImage: `/images/wall.jpg`,
     ogImage: `/images/wall.jpg`,
     twoColumnWall: true,
@@ -12,7 +12,7 @@ const siteMetadata = {
     description: `Apasionada por la eficiencia energética`,
     about:
         "Me enfoco al desarrollo de ingenierías HVAC buscando el diseño óptimo para lograr ahorros energéticos. Me apasiona la eficiencia energética desde el punto de vista ingenieril. Cuento con la acreditación CEM (Certified Energy Manager) otorgada por la Asociación de Ingenieros de Energía de Estados Unidos y la acreditación de LEED AP BD+C. Tengo experiencia diseñando sistemas HVAC para el ramo residencial, comercial, industrial y el sector salud. Me enfoco en garantizar en todos mis diseños un desempeño energético óptimo, acoplándome a los requerimientos del cliente, cuidando siempre cumplir con las condiciones de confort interiores y el filtrado ideal para la calidad del aire requerida. Actualmente diseño ingenierías HVAC y desarrollo auditorías energéticas. ",
-    author: `@nucleo_energia`,
+    author: false,
     experienceItemsPerPage: 10,
     darkmode: false,
     switchTheme: false,
@@ -42,30 +42,15 @@ const siteMetadata = {
     ],
     social: [
         {
-            name: "Facebook",
-            icon: "/images/Facebook.svg",
-            url: "https://facebook.com/nucleo.ingenieria",
-        },
-        {
-            name: "Twitter",
-            icon: "/images/Twitter.svg",
-            url: "https://twitter.com/nucleo_energia",
-        },
-        {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: "https://instagram.com/nucleo.ingenieria",
-        },
-        {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
-            url: "https://www.youtube.com/channel/UC6Lutp_r91hj9sHeX09156Q/featured",
-        },
+            name: "LinkedIn",
+            icon: "/images/LinkedIn.svg",
+            url: "https://www.linkedin.com/in/ing-veronica-ledesma/",
+        }
     ],
     contact: {        
         api_url: "https://getform.io/f/cd3c6911-f5f0-4c38-a897-7c347eee9297",
-        description: `Si te gustaría agendar alguna consulta técnica, deja tus datos y me pondré en contacto contigo.`,
-        mail: "info@nucleoingenieria.com.mx"        
+        description: `Si te gustaría agendar alguna consulta técnica, deja tus datos y me pondré en contacto contigo. También puedes contactarme via LinkedIn.`,
+        mail: false
     },
     disqus: "elemental-netlify-com",
 }
