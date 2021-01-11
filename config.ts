@@ -48,7 +48,7 @@ const siteMetadata = {
         },
         {
             name: "YouTube",
-            icon: "/images/YouTube.svg",
+            icon: "/images/Youtube.svg",
             url: "https://www.youtube.com/channel/UC6Lutp_r91hj9sHeX09156Q",
         }
     ],
