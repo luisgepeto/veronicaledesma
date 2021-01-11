@@ -1347,6 +1347,16 @@
                   "defaultValue": null
                 },
                 {
+                  "name": "gatsbyImageData",
+                  "description": "",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "JSONQueryOperatorInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
                   "name": "original",
                   "description": "",
                   "type": {
@@ -2501,6 +2511,16 @@
               "defaultValue": null
             },
             {
+              "name": "gatsbyImageData",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "JSONQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "original",
               "description": "",
               "type": {
@@ -3045,6 +3065,95 @@
               "defaultValue": null
             }
           ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "JSONQueryOperatorInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "eq",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "JSON",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "ne",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "JSON",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "in",
+              "description": null,
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "nin",
+              "description": null,
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "regex",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "JSON",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "glob",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "JSON",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "SCALAR",
+          "name": "JSON",
+          "description": "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).",
+          "fields": null,
+          "inputFields": null,
           "interfaces": null,
           "enumValues": null,
           "possibleTypes": null
@@ -4124,95 +4233,6 @@
               "defaultValue": null
             }
           ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "INPUT_OBJECT",
-          "name": "JSONQueryOperatorInput",
-          "description": null,
-          "fields": null,
-          "inputFields": [
-            {
-              "name": "eq",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "JSON",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "ne",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "JSON",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "in",
-              "description": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "JSON",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "nin",
-              "description": null,
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "SCALAR",
-                  "name": "JSON",
-                  "ofType": null
-                }
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "regex",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "JSON",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "glob",
-              "description": null,
-              "type": {
-                "kind": "SCALAR",
-                "name": "JSON",
-                "ofType": null
-              },
-              "defaultValue": null
-            }
-          ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "SCALAR",
-          "name": "JSON",
-          "description": "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).",
-          "fields": null,
-          "inputFields": null,
           "interfaces": null,
           "enumValues": null,
           "possibleTypes": null
@@ -5599,7 +5619,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "toFormatBase64",
@@ -5609,7 +5629,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "cropFocus",
@@ -5802,7 +5822,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "toFormatBase64",
@@ -5812,7 +5832,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "cropFocus",
@@ -6005,7 +6025,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "toFormatBase64",
@@ -6015,7 +6035,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "cropFocus",
@@ -6232,7 +6252,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "toFormatBase64",
@@ -6242,7 +6262,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "cropFocus",
@@ -6326,6 +6346,201 @@
               },
               "isDeprecated": true,
               "deprecationReason": "Sizes was deprecated in Gatsby v2. It's been renamed to \"fluid\" https://example.com/write-docs-and-fix-this-example-link"
+            },
+            {
+              "name": "gatsbyImageData",
+              "description": null,
+              "args": [
+                {
+                  "name": "layout",
+                  "description": "The layout for the image.\nFIXED: A static image sized, that does not resize according to the screen width\nFLUID: The image resizes to fit its container. Pass a \"sizes\" option if it isn't going to be the full width of the screen. \nCONSTRAINED: Resizes to fit its container, up to a maximum width, at which point it will remain fixed in size.",
+                  "type": {
+                    "kind": "ENUM",
+                    "name": "ImageLayout",
+                    "ofType": null
+                  },
+                  "defaultValue": "FIXED"
+                },
+                {
+                  "name": "maxWidth",
+                  "description": "Maximum display width of generated files. \nThe actual largest image resolution will be this value multipled by the largest value in outputPixelDensities\nThis only applies when layout = FLUID or CONSTRAINED. For other layout types, use \"width\"",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "maxHeight",
+                  "description": "If set, the generated image is a maximum of this height, cropping if necessary. \nIf the image layout is \"constrained\" then the image will be limited to this height. \nIf the aspect ratio of the image is different than the source, then the image will be cropped.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "width",
+                  "description": "The display width of the generated image. \nThe actual largest image resolution will be this value multipled by the largest value in outputPixelDensities\nIgnored if layout = FLUID or CONSTRAINED, where you should use \"maxWidth\" instead.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "height",
+                  "description": "If set, the height of the generated image. If omitted, it is calculated from the supplied width, matching the aspect ratio of the source image.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "placeholder",
+                  "description": "Format of generated placeholder image, displayed while the main image loads. \nBLURRED: a blurred, low resolution image, encoded as a base64 data URI (default)\nDOMINANT_COLOR: a solid color, calculated from the dominant color of the image. \nTRACED_SVG: a low-resolution traced SVG of the image.\nNONE: no placeholder. Set \"background\" to use a fixed background color.",
+                  "type": {
+                    "kind": "ENUM",
+                    "name": "ImagePlaceholder",
+                    "ofType": null
+                  },
+                  "defaultValue": "BLURRED"
+                },
+                {
+                  "name": "blurredOptions",
+                  "description": "Options for the low-resolution placeholder image. Set placeholder to \"BLURRED\" to use this",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "BlurredOptions",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "tracedSVGOptions",
+                  "description": "Options for traced placeholder SVGs. You also should set placeholder to \"SVG\".",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "Potrace",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "formats",
+                  "description": "The image formats to generate. Valid values are \"AUTO\" (meaning the same format as the source image), \"JPG\", \"PNG\" and \"WEBP\". \nThe default value is [AUTO, WEBP], and you should rarely need to change this. Take care if you specify JPG or PNG when you do\nnot know the formats of the source images, as this could lead to unwanted results such as converting JPEGs to PNGs. Specifying \nboth PNG and JPG is not supported and will be ignored.",
+                  "type": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "ENUM",
+                      "name": "ImageFormat",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": "[WEBP]"
+                },
+                {
+                  "name": "outputPixelDensities",
+                  "description": "A list of image pixel densities to generate. It will never generate images larger than the source, and will always include a 1x image. \nDefault is [ 1, 2 ] for fixed images, meaning 1x, 2x, 3x, and [0.25, 0.5, 1, 2] for fluid. In this case, an image with a fluid layout and width = 400 would generate images at 100, 200, 400 and 800px wide",
+                  "type": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "Float",
+                      "ofType": null
+                    }
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "sizes",
+                  "description": "The \"sizes\" property, passed to the img tag. This describes the display size of the image. \nThis does not affect the generated images, but is used by the browser to decide which images to download. You can leave this blank for fixed images, or if the responsive image\ncontainer will be the full width of the screen. In these cases we will generate an appropriate value.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": "\"\""
+                },
+                {
+                  "name": "quality",
+                  "description": "The default quality. This is overriden by any format-specific options",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "jpgOptions",
+                  "description": "Options to pass to sharp when generating JPG images.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "JPGOptions",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "pngOptions",
+                  "description": "Options to pass to sharp when generating PNG images.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PNGOptions",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "webpOptions",
+                  "description": "Options to pass to sharp when generating WebP images.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "WebPOptions",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "transformOptions",
+                  "description": "Options to pass to sharp to control cropping and other image manipulations.",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "TransformOptions",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "background",
+                  "description": "Background color applied to the wrapper. Also passed to sharp to use as a background when \"letterboxing\" an image to another aspect ratio.",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": "\"rgba(0,0,0,0)\""
+                }
+              ],
+              "type": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "JSON",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
             },
             {
               "name": "original",
@@ -6481,7 +6696,7 @@
                     "name": "ImageFormat",
                     "ofType": null
                   },
-                  "defaultValue": "NO_CHANGE"
+                  "defaultValue": "AUTO"
                 },
                 {
                   "name": "cropFocus",
@@ -6829,6 +7044,12 @@
           "enumValues": [
             {
               "name": "NO_CHANGE",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "AUTO",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -7621,6 +7842,255 @@
           ],
           "inputFields": null,
           "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "ENUM",
+          "name": "ImageLayout",
+          "description": null,
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "FIXED",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "FLUID",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "CONSTRAINED",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "ENUM",
+          "name": "ImagePlaceholder",
+          "description": null,
+          "fields": null,
+          "inputFields": null,
+          "interfaces": null,
+          "enumValues": [
+            {
+              "name": "DOMINANT_COLOR",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "TRACED_SVG",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "BLURRED",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "NONE",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "BlurredOptions",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "width",
+              "description": "Width of the generated low-res preview. Default is 20px",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "toFormat",
+              "description": "Force the output format for the low-res preview. Default is to use the same format as the input. You should rarely need to change this",
+              "type": {
+                "kind": "ENUM",
+                "name": "ImageFormat",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "JPGOptions",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "quality",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "progressive",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "defaultValue": "true"
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "PNGOptions",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "quality",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "compressionSpeed",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": "4"
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "WebPOptions",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "quality",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "TransformOptions",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "grayscale",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "defaultValue": "false"
+            },
+            {
+              "name": "duotone",
+              "description": null,
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "DuotoneGradient",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "rotate",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "defaultValue": "0"
+            },
+            {
+              "name": "trim",
+              "description": null,
+              "type": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              },
+              "defaultValue": "0"
+            },
+            {
+              "name": "cropFocus",
+              "description": null,
+              "type": {
+                "kind": "ENUM",
+                "name": "ImageCropFocus",
+                "ofType": null
+              },
+              "defaultValue": "ATTENTION"
+            },
+            {
+              "name": "fit",
+              "description": null,
+              "type": {
+                "kind": "ENUM",
+                "name": "ImageFit",
+                "ofType": null
+              },
+              "defaultValue": "COVER"
+            }
+          ],
+          "interfaces": null,
           "enumValues": null,
           "possibleTypes": null
         },
@@ -8885,6 +9355,12 @@
             },
             {
               "name": "childImageSharp___sizes___presentationHeight",
+              "description": null,
+              "isDeprecated": true,
+              "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+            },
+            {
+              "name": "childImageSharp___gatsbyImageData",
               "description": null,
               "isDeprecated": true,
               "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
@@ -15857,6 +16333,76 @@
           "fields": null,
           "inputFields": [
             {
+              "name": "base64Width",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "IntQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "stripMetadata",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "BooleanQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "defaultQuality",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "IntQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "failOnError",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "BooleanQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "isTSX",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "BooleanQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "jsxPragma",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "allExtensions",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "BooleanQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "name",
               "description": "",
               "type": {
@@ -15882,6 +16428,36 @@
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "SitePluginPluginOptionsGatsbyRemarkPluginsFilterListInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "extensions",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "lessBabel",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "BooleanQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "mediaTypes",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -16696,6 +17272,90 @@
           "description": null,
           "fields": [
             {
+              "name": "base64Width",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "stripMetadata",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "defaultQuality",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "failOnError",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "isTSX",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "jsxPragma",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "allExtensions",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "name",
               "description": null,
               "args": [],
@@ -16729,6 +17389,50 @@
                 "ofType": {
                   "kind": "OBJECT",
                   "name": "SitePluginPluginOptionsGatsbyRemarkPlugins",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "extensions",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "lessBabel",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "mediaTypes",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
                   "ofType": null
                 }
               },
@@ -18066,6 +18770,48 @@
               "deprecationReason": null
             },
             {
+              "name": "pluginCreator___pluginOptions___base64Width",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___stripMetadata",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___defaultQuality",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___failOnError",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___isTSX",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___jsxPragma",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___allExtensions",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "pluginCreator___pluginOptions___name",
               "description": null,
               "isDeprecated": false,
@@ -18085,6 +18831,24 @@
             },
             {
               "name": "pluginCreator___pluginOptions___gatsbyRemarkPlugins___resolve",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___extensions",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___lessBabel",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___mediaTypes",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -18896,6 +19660,12 @@
             },
             {
               "name": "sizes___presentationHeight",
+              "description": null,
+              "isDeprecated": true,
+              "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+            },
+            {
+              "name": "gatsbyImageData",
               "description": null,
               "isDeprecated": true,
               "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
@@ -20126,6 +20896,12 @@
               "deprecationReason": null
             },
             {
+              "name": "frontmatter___image___childImageSharp___gatsbyImageData",
+              "description": null,
+              "isDeprecated": true,
+              "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+            },
+            {
               "name": "frontmatter___image___childImageSharp___id",
               "description": null,
               "isDeprecated": true,
@@ -20496,6 +21272,12 @@
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
+            },
+            {
+              "name": "frontmatter___banner___childImageSharp___gatsbyImageData",
+              "description": null,
+              "isDeprecated": true,
+              "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
             },
             {
               "name": "frontmatter___banner___childImageSharp___id",
@@ -23351,6 +24133,48 @@
               "deprecationReason": null
             },
             {
+              "name": "pluginOptions___base64Width",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___stripMetadata",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___defaultQuality",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___failOnError",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___isTSX",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___jsxPragma",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___allExtensions",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "pluginOptions___name",
               "description": null,
               "isDeprecated": false,
@@ -23376,6 +24200,24 @@
             },
             {
               "name": "pluginOptions___gatsbyRemarkPlugins___options___maxWidth",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___extensions",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___lessBabel",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___mediaTypes",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

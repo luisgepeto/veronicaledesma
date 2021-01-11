@@ -10,7 +10,7 @@
 export interface SeoQuery_site_siteMetadata {
   title: string | null;
   description: string | null;
-  author: string | null;
+  author: boolean | null;
   ogImage: string | null;
 }
 

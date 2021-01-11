@@ -45,6 +45,11 @@ const siteMetadata = {
             name: "LinkedIn",
             icon: "/images/LinkedIn.svg",
             url: "https://www.linkedin.com/in/ing-veronica-ledesma/",
+        },
+        {
+            name: "YouTube",
+            icon: "/images/YouTube.svg",
+            url: "https://www.youtube.com/channel/UC6Lutp_r91hj9sHeX09156Q",
         }
     ],
     contact: {        

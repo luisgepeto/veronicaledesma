@@ -10,7 +10,7 @@
 export interface IndexPageQuery_site_siteMetadata_contact {
   api_url: string | null;
   description: string | null;
-  mail: string | null;
+  mail: boolean | null;
 }
 
 export interface IndexPageQuery_site_siteMetadata_social {
