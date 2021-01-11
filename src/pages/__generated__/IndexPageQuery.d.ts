@@ -49,6 +49,9 @@ export interface IndexPageQuery_experience_edges_node_frontmatter_image_childIma
 }
 
 export interface IndexPageQuery_experience_edges_node_frontmatter_image {
+  /**
+   * Returns the first child node of type ImageSharp or null if there are no children of given type on this node
+   */
   childImageSharp: IndexPageQuery_experience_edges_node_frontmatter_image_childImageSharp | null;
 }
 
