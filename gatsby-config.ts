@@ -13,7 +13,7 @@ const plugins = [
         resolve: `gatsby-source-filesystem`,
         options: {
             name: `experience`,
-            path: `${__dirname}/contents/experiencia/`,
+            path: `${__dirname}/contents/experience/`,
         },
     },
     {
