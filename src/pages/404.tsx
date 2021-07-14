@@ -17,11 +17,11 @@ export default ({ location }: PageProps<{}, {}>) => {
                     </h2>
                 </div>
                 <div className="pb-20 text-center">
-                    <p>Lo siento, la página que buscas no existe <span role="img" aria-label="Sad face">😞</span></p>
+                    <p>The page you are looking for does not exist<span role="img" aria-label="Sad face">😞</span></p>
                     <p>
                         <button onClick={() => {
                             if(window.history) window.history.back();
-                        }} className="text-link">Regresar</button>
+                        }} className="text-link">Go back</button>
                     </p>
                 </div>
             </div>

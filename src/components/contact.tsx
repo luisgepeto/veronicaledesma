@@ -39,14 +39,14 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                                 4: {
                                     type: "success",
                                     message:
-                                        "Tu mensaje ha sido enviado.",
+                                        "Your message has been sent.",
                                 },
                             })
                         } else {
                             setFeedback({
                                 4: {
                                     message:
-                                        "Ocurrió un error enviando tu mensaje. Por favor intenta de nuevo.",
+                                        "An error occurred when sending your message. Please try again.",
                                 },
                             })
                         }
@@ -55,7 +55,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                         setFeedback({
                             4: {
                                 message:
-                                "Ocurrió un error enviando tu mensaje. Por favor intenta de nuevo.",
+                                "An error occurred when sending your message. Please try again.",
                             },
                         })
                         setTransactionState(false);
@@ -73,7 +73,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
             }}
         >
             <TextInput
-                label="Nombre"
+                label="Name"
                 name="name"
                 onChange={e =>
                     updateData({
@@ -106,7 +106,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 }
             />
             <TextInput
-                label="Mensaje"
+                label="Message"
                 name="message"
                 type="textarea"
                 onChange={e =>
@@ -131,7 +131,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
                 <Button
                     type="button,submit"
-                    title="Enviar"
+                    title="Send"
                     disabled={transactionState}
                     iconRight={<IconRight spin={transactionState}/>}
                 />
@@ -142,9 +142,9 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
 const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = ({ data }) => {
     return (
-        <div>
+        <div >
             {data.description && (
-                <p className="text-color-default">{data.description}</p>
+                <p className="text-color-default flex justify-center">{data.description}</p>
             )}
             <ul className="my-4">
                 {data.mail && (
@@ -157,7 +157,7 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
                         </a>
                     </li>
                 )}                
-                <li>
+                <li className="flex justify-center">
                     <SocialLinks />
                 </li>
             </ul>

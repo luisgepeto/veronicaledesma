@@ -9,7 +9,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Row, Col } from "../components/shortcodes/index"
 import { ExperienceQuery } from "./__generated__/ExperienceQuery"
 
-export default function experience ({ location, data }: PageProps<ExperienceQuery, {}>) {    
+export default function experience ({ location, data }: PageProps<ExperienceQuery, {}>) {        
     return (
         <Layout
             seo={{

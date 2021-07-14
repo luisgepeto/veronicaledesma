@@ -10,11 +10,18 @@ import { Button } from "../components/ui"
 import ItemExperience from "../components/item-experience"
 import { Form, Description as ContactDescription } from "../components/contact"
 import { IndexPageQuery } from "./__generated__/IndexPageQuery"
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants"
 
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
-
-    const experienceList = data.experience.edges.map((item, _) => (
+    const orderedExperience = data.experience.edges.sort((a, b) => {
+        if(a.node.frontmatter.order < b.node.frontmatter.order)
+            return -1;
+        if(a.node.frontmatter.order > b.node.frontmatter.order)
+            return 1;
+        return 0;
+    });
+    const experienceList = orderedExperience.map((item, _) => (
         <ItemExperience
             data={item.node}
             key={`p-item-index-${item.node.id}`}
@@ -27,7 +34,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         <Layout
             front={true}
             seo={{
-                title: "Inicio",
+                title: "Home",
                 description: siteData.description,
             }}
             navPlaceholder={false}
@@ -92,7 +99,7 @@ const Wall = ({ data }) => {
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
             <ScrollIntoView selector="#experience">
                 <Button
-                    title="EXPERIENCIA"
+                    title="EXPERIENCE"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
@@ -141,7 +148,7 @@ const About = ({ data }) => {
         <div id="about" className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Acerca de mí
+                    About me
                 </h2>
                 <p className="mt-5 text-lg">{data}</p>
             </div>
@@ -153,9 +160,9 @@ const Contact = ({ data }) => {
     const hasContactForm = data.api_url
     return (
         <div id="contact" className="container mx-auto">
-            <div className="pt-20 pb-10 lg:pt-40 lg:pb-20 text-center">
+            <div className="pt-20 pb-5 lg:pt-40 lg:pb-5 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Contacto
+                    Contact
                 </h2>
             </div>
             <div className="flex flex-wrap pb-40">
@@ -167,7 +174,7 @@ const Contact = ({ data }) => {
                 <div
                     className={`w-full ${
                         hasContactForm ? "lg:w-1/2" : "lg:w-2/3 mx-auto"
-                    } px-6 pt-8`}
+                    } px-6 pt-2`}
                 >
                     <ContactDescription data={data} />
                 </div>
@@ -211,6 +218,7 @@ export const query = graphql`
                     frontmatter {
                         title
                         description
+                        order
                         image {
                             childImageSharp {
                                 fluid(maxWidth: 1000) {

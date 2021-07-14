@@ -82,14 +82,14 @@ export const ItemExperience: React.FC<ItemExperienceProps> = ({ data, even }) =>
                         >
                             <h3 className="text-color-1 text-5xl font-black to-up capitalize">
                                 {data.frontmatter.title}
-                            </h3>
-                            <p className="lg:mt-4 to-up">
+                            </h3> 
+                            <p className="lg:mt-4 to-up">                                
                                 {data.frontmatter.description}
                             </p>
                             <Button
                                 to={data.fields.slug}
-                                label={`Más información ${data.frontmatter.title}`}
-                                title={"Más información"}
+                                label={`View more ${data.frontmatter.title}`}
+                                title={"View more"}
                                 iconRight={<ArrowRight />}
                             />
                         </div>

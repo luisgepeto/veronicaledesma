@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Ing. Verónica Ledesma`,
+    title: `Verónica Ledesma`,
     siteUrl: `https://veronicaledesma.com`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,    
@@ -8,43 +8,37 @@ const siteMetadata = {
     ogImage: `/images/wall.jpg`,
     twoColumnWall: true,
     cookiePolicy: false,
-    introTag: `CEM | LEED AP BD+C | Ingeniera HVAC`,
-    description: `Apasionada por la eficiencia energética`,
+    introTag: `CEM | LEED AP BD+C | B.Sc. Mechatronics Engineering`,
+    description: `Passionate about energy efficiency`,
     about:
-        "Me enfoco al desarrollo de ingenierías HVAC buscando el diseño óptimo para lograr ahorros energéticos. Me apasiona la eficiencia energética desde el punto de vista ingenieril. Cuento con la acreditación CEM (Certified Energy Manager) otorgada por la Asociación de Ingenieros de Energía de Estados Unidos y la acreditación de LEED AP BD+C. Tengo experiencia diseñando sistemas HVAC para el ramo residencial, comercial, industrial y el sector salud. Me enfoco en garantizar en todos mis diseños un desempeño energético óptimo, acoplándome a los requerimientos del cliente, cuidando siempre cumplir con las condiciones de confort interiores y el filtrado ideal para la calidad del aire requerida. Actualmente diseño ingenierías HVAC y desarrollo auditorías energéticas. ",
+        "I have always been passionate about energy efficiency. I am an energy advisor and HVAC system designer. I am a Certified Energy Manager by the Association of Energy Engineers, and an accredited LEED AP BD+C by the USGBC. I have conducted energy audits in accordance with ASHRAE 211 and ISO 50002. Over the past three years I have had the honor of working hand in hand with Honeywell and Lego, implementing energy efficiency measures, and coaching the on-site O&M team on energy related topics. I have been responsible for HVAC design projects in the residential, commercial, industrial, and healthcare sectors. I define my approach as energy-efficiency-first, by maximizing energy performance, thermal comfort, and indoor air quality, while meeting customer requirements.",
     author: false,
     experienceItemsPerPage: 10,
     darkmode: false,
     switchTheme: false,
     navLinks: [
         {
-            name: "INICIO",
+            name: "HOME",
             url: "/",
         },
         {
-            name: "ACERCA DE MÍ",
+            name: "ABOUT ME",
             url: "/#about",
         },
         {
-            name: "EXPERIENCIA",
+            name: "EXPERIENCE",
             url: "/#experience",
         },
         {
-            name: "CONTACTO",
+            name: "CONTACT",
             url: "/#contact",
         },
-    ],
-    footerLinks: [
-        {
-            name: "AVISO DE PRIVACIDAD",
-            url: "/aviso-de-privacidad",
-        }
     ],
     social: [
         {
             name: "LinkedIn",
             icon: "/images/LinkedIn.svg",
-            url: "https://www.linkedin.com/in/ing-veronica-ledesma/",
+            url: "https://www.linkedin.com/in/ing-veronica-ledesma/?locale=en_US",
         },
         {
             name: "YouTube",
@@ -53,8 +47,8 @@ const siteMetadata = {
         }
     ],
     contact: {        
-        api_url: "https://getform.io/f/cd3c6911-f5f0-4c38-a897-7c347eee9297",
-        description: `Si te gustaría agendar alguna consulta técnica, deja tus datos y me pondré en contacto contigo. También puedes contactarme via LinkedIn.`,
+        api_url: false,
+        description: `If you would like to schedule a technical call you can contact me via LinkedIn.`,
         mail: false
     },
     disqus: "elemental-netlify-com",
@@ -71,21 +65,21 @@ const beforeContactFormSubmit = data => {
     if (data.name.trim().length < 2) {
         errors.push({
             code: 1,
-            message: "Escribe tu nombre",
+            message: "Please enter your name",
         })
     }
 
     if (!data.email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)) {
         errors.push({
             code: 2,
-            message: "Escribe tu dirección de correo electrónico",
+            message: "Please enter your email address",
         })
     }
 
     if (data.message.trim().length < 15) {
         errors.push({
             code: 3,
-            message: "Escribe un mensaje con al menos 15 caracteres",
+            message: "Please write a message with at least 15 characters",
         })
     }
 

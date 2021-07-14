@@ -58,6 +58,7 @@ export interface IndexPageQuery_experience_edges_node_frontmatter_image {
 export interface IndexPageQuery_experience_edges_node_frontmatter {
   title: string;
   description: string | null;
+  order: number | null;
   image: IndexPageQuery_experience_edges_node_frontmatter_image | null;
 }
 
