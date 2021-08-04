@@ -20,11 +20,9 @@ function SEO({ description, lang, meta, title, image }: SEOProps) {
             }
         `
     )
-
     const metaDescription = description || site.siteMetadata.description
     const ogImage = image || site.siteMetadata.ogImage
     const capitalizedTitle = title.replace(/^\w/, c => c.toUpperCase());
-
     return (
         <Helmet
             htmlAttributes={{
