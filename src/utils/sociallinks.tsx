@@ -11,6 +11,7 @@ const ListItem = ({ data }) => {
     )
 }
 
+
 export default () => {
     const data = useStaticQuery(graphql`
         query SocialQuery {
