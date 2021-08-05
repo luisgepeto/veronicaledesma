@@ -9,7 +9,10 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Row, Col } from "../components/shortcodes/index"
 import { ExperienceQuery } from "./__generated__/ExperienceQuery"
 
-export default function experience ({ location, data }: PageProps<ExperienceQuery, {}>) {        
+export default function experience({
+    location,
+    data,
+}: PageProps<ExperienceQuery, {}>) {
     return (
         <Layout
             seo={{
@@ -32,24 +35,20 @@ export default function experience ({ location, data }: PageProps<ExperienceQuer
                             <h1 className="text-5xl font-bold text-color-1 lg:text-white capitalize">
                                 {data.mdx.frontmatter.title}
                             </h1>
-                            {
-                                data.mdx.frontmatter.date && data.mdx.frontmatter.show_date && (
-                                <p className="mt-1 flex items-center justify-center">
-                                    <Calendar />{" "}
-                                    <span className="ml-2">
-                                        {data.mdx.frontmatter.date}
-                                    </span>
-                                </p>
-                                )
-                            }
-                            {
-                                data.mdx.frontmatter.show_description && (
-                                    <p className="mt-3 md:w-3/4 mx-auto">
-                                        {data.mdx.frontmatter.description}
+                            {data.mdx.frontmatter.date &&
+                                data.mdx.frontmatter.show_date && (
+                                    <p className="mt-1 flex items-center justify-center">
+                                        <Calendar />{" "}
+                                        <span className="ml-2">
+                                            {data.mdx.frontmatter.date}
+                                        </span>
                                     </p>
-                                )
-                            }
-                            
+                                )}
+                            {data.mdx.frontmatter.show_description && (
+                                <p className="mt-3 md:w-3/4 mx-auto">
+                                    {data.mdx.frontmatter.description}
+                                </p>
+                            )}
                         </div>
                     </div>
                 </div>

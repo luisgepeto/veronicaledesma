@@ -36,6 +36,7 @@ export interface ExperienceQuery_mdx_frontmatter {
   date: any | null;
   description: string | null;
   show_description: boolean | null;
+  order: number | null;
   show_date: boolean | null;
   banner: ExperienceQuery_mdx_frontmatter_banner | null;
 }

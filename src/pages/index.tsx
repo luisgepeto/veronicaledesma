@@ -15,12 +15,10 @@ import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants"
 export default ({ data, location }: PageProps<IndexPageQuery>) => {
     const siteData = data.site.siteMetadata
     const orderedExperience = data.experience.edges.sort((a, b) => {
-        if(a.node.frontmatter.order < b.node.frontmatter.order)
-            return -1;
-        if(a.node.frontmatter.order > b.node.frontmatter.order)
-            return 1;
-        return 0;
-    });
+        if (a.node.frontmatter.order < b.node.frontmatter.order) return -1
+        if (a.node.frontmatter.order > b.node.frontmatter.order) return 1
+        return 0
+    })
     const experienceList = orderedExperience.map((item, _) => (
         <ItemExperience
             data={item.node}
@@ -29,7 +27,6 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         />
     ))
 
-    
     return (
         <Layout
             front={true}
@@ -44,7 +41,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             {siteData.about !== "" && <About data={siteData.about} />}
             <div className="px-4 lg:px-0" id="experience">
                 {experienceList}
-            </div>            
+            </div>
             <Contact data={siteData.contact} />
         </Layout>
     )
@@ -78,7 +75,6 @@ const Wall = ({ data }) => {
         spanAttrs.style = {
             backgroundImage: `url('${data.titleImage}')`,
         }
-
     }
 
     const innerComponents = (
@@ -199,7 +195,7 @@ export const query = graphql`
                 contact {
                     api_url
                     description
-                    mail                    
+                    mail
                 }
                 social {
                     name
@@ -232,6 +228,6 @@ export const query = graphql`
                     }
                 }
             }
-        }        
+        }
     }
 `
