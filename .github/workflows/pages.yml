@@ -1,11 +1,11 @@
 name: GitHub Pages
 
-on:  
+on:
   push:
     branches:
       - master
     paths: 
-      - src
+      - src/**
 
 jobs:  
   publish:
@@ -18,7 +18,7 @@ jobs:
         run: npm install
         
       - name: Generate deployment build
-        run: npm run build
+        run: npm run deploy
 
       - name: Create CNAME record
         run: echo veronicaledesma.com > ./public/CNAME
